@@ -1,9 +1,10 @@
 import "./App.css";
+import Hero from "./Hero/Hero";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Second Chances</h1>
+      <Hero />
     </div>
   );
 };

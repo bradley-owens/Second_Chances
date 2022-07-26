@@ -1,0 +1,26 @@
+.hero {
+  height: 100vh;
+  background-color: #c8b6ff;
+}
+
+.hero-container__main {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+
+.hero-title {
+  color: #fbff12;
+  font-size: 3.6rem;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero-about {
+  color: white;
+  padding: 2rem 12rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
