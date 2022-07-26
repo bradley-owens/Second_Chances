@@ -10,7 +10,7 @@ const Hero = () => {
         <h3 className="hero-about">
           Second Chances gives you the oppurtunity to seek out and provide a new
           home to all the oldies and younglings up for adoption that didn't get
-          the chance to give out all love they can!
+          the chance to give out all their love!
         </h3>
         <PetForm />
       </div>
