@@ -12,6 +12,7 @@ const App = () => {
     .search()
     .then(function (response) {
       let animals = response.data.animals;
+      console.log(animals);
 
       let oldies = animals
         .map((el) => {
@@ -25,8 +26,9 @@ const App = () => {
         })
         .filter((pet) => pet != undefined);
 
-      // console.log(pics);
+      console.log(pics);
     })
+
     .catch(function (error) {
       // console.log(error);
     });
