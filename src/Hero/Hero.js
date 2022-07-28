@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PetForm from "./PetForm";
+import PetDisplay from "./PetDisplay";
 import "./Hero.css";
-import img from "./IMG/Hero.svg";
 
-const Hero = () => {
+const Hero = (props) => {
+  const [formSubmission, setFormSubmission] = useState(false);
+  const [animalData, setAnimalData] = useState({});
   const savePetFormData = (enteredData) => {
-    const animalData = {
+    setAnimalData({
       ...enteredData,
       id: Math.random().toString(),
-    };
-    console.log("IN HERO.JS");
-    console.log(animalData);
+    });
+
+    setFormSubmission(true);
   };
 
   return (
@@ -26,7 +28,11 @@ const Hero = () => {
       <div className="hero-form">
         <PetForm onSavePetFormData={savePetFormData} />
       </div>
-      <img className="hero-img" src={img}></img>
+      <PetDisplay
+        onSaveAnimalData={animalData}
+        onSaveFormSubmission={formSubmission}
+        onSaveApiAnimals={props.onSaveApiData}
+      />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import "./App.css";
 import Hero from "./Hero/Hero";
 import { Client } from "@petfinder/petfinder-js";
@@ -8,25 +10,26 @@ const client = new Client({
 });
 
 const App = () => {
+  const [apiData, setApiData] = useState("");
+
   client.animal
     .search()
     .then(function (response) {
-      let animals = response.data.animals;
-      console.log(animals);
+      const animals = response.data.animals;
 
-      let oldies = animals
-        .map((el) => {
-          if (el.age === "Adult") return el;
-        })
-        .filter((pet) => pet != undefined);
-
-      let pics = animals
+      const pics = animals
         .map((el) => {
           if (el.photos.length > 0) return el;
         })
         .filter((pet) => pet != undefined);
 
-      console.log(pics);
+      setApiData(pics);
+
+      // let oldies = animals
+      //   .map((el) => {
+      //     if (el.age === "Adult") return el;
+      //   })
+      //   .filter((pet) => pet != undefined);
     })
 
     .catch(function (error) {
@@ -35,7 +38,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Hero />
+      <Hero onSaveApiData={apiData} />
     </div>
   );
 };

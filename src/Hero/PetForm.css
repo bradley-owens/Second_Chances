@@ -1,3 +1,7 @@
+.pet-form.hidden {
+  display: none;
+}
+
 .search-pet__controls {
   display: flex;
   flex-direction: column;
