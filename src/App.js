@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import Hero from "./Hero/Hero";
@@ -12,11 +12,10 @@ const client = new Client({
 const App = () => {
   const [apiData, setApiData] = useState("");
 
-  client.animal
-    .search()
-    .then(function (response) {
+  useEffect(() => {
+    async function fetchPetData() {
+      const response = await client.animal.search();
       const animals = response.data.animals;
-
       const pics = animals
         .map((el) => {
           if (el.photos.length > 0) return el;
@@ -24,17 +23,9 @@ const App = () => {
         .filter((pet) => pet != undefined);
 
       setApiData(pics);
-
-      // let oldies = animals
-      //   .map((el) => {
-      //     if (el.age === "Adult") return el;
-      //   })
-      //   .filter((pet) => pet != undefined);
-    })
-
-    .catch(function (error) {
-      // console.log(error);
-    });
+    }
+    fetchPetData();
+  }, []);
 
   return (
     <div className="App">

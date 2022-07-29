@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./PetForm.css";
+import styles from "./PetForm.module.css";
 
 const Petform = (props) => {
   const [animalType, setAnimalType] = useState("");
   const [animalAge, setAnimalAge] = useState("");
   const [animalLocation, SetAnimalLocation] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState("false");
 
   const animalTypeHandler = (e) => {
     setAnimalType(e.target.value);
@@ -27,6 +28,8 @@ const Petform = (props) => {
       location: animalLocation,
     };
 
+    setFormSubmitted(true);
+
     props.onSavePetFormData(animalData);
 
     setAnimalType("");
@@ -35,15 +38,19 @@ const Petform = (props) => {
   };
   return (
     <form onSubmit={onSubmitFormHandler}>
-      <div className="search-pet__controls">
-        <div className="search-pet__control">
+      <div
+        className={`${styles["search-pet__controls"]} ${
+          formSubmitted && styles["form-submitted"]
+        }`}
+      >
+        <div className={styles["search-pet__control"]}>
           <label>Animal</label>
           <select onChange={animalTypeHandler} type="text">
             <option value="dog">Doggo</option>
             <option value="dog">A Meow</option>
           </select>
         </div>
-        <div className="search-pet__control">
+        <div className={styles["search-pet__control"]}>
           <label>Age</label>
           <select onChange={animalAgeHandler} type="number">
             <option value="senior">Oldy</option>
@@ -52,7 +59,7 @@ const Petform = (props) => {
             <option value="baby">Baby</option>
           </select>
         </div>
-        <div className="search-pet__control">
+        <div className={styles["search-pet__control"]}>
           <label>Location/Zip</label>
           <input
             onChange={animalLocationHandler}
@@ -63,7 +70,7 @@ const Petform = (props) => {
         </div>
       </div>
 
-      <div className="search-pet__actions">
+      <div className={styles["search-pet__actions"]}>
         <button type="submit">Take a Chance</button>
       </div>
     </form>

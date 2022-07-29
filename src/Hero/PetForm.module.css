@@ -1,5 +1,9 @@
-.pet-form.hidden {
-  display: none;
+.form-submitted {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .search-pet__controls {

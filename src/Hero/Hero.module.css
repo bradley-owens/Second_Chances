@@ -6,13 +6,13 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.hero-container__main {
+.container__main {
   grid-row: 1/1;
   grid-column: 1/-1;
   align-self: center;
 }
 
-.hero-title {
+.hero h1 {
   color: #fbff12;
   font-size: 3.6rem;
   font-weight: bold;
@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.hero-about {
+.hero h3 {
   color: white;
   padding: 3rem 0;
   text-align: center;
@@ -33,7 +33,7 @@
   margin-top: -2rem;
 }
 
-.hero-img {
+.hero img {
   width: 70%;
   grid-row: 2/-1;
   grid-column: 2/3;
