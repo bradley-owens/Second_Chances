@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./PetForm.module.css";
 
 const Petform = (props) => {
-  const [animalType, setAnimalType] = useState("");
-  const [animalAge, setAnimalAge] = useState("");
-  const [animalLocation, SetAnimalLocation] = useState("");
+  const [animalType, setAnimalType] = useState("Dog");
+  const [animalAge, setAnimalAge] = useState("Senior");
+  const [animalGender, SetAnimalGender] = useState("Girl");
   const [formSubmitted, setFormSubmitted] = useState("false");
 
   const animalTypeHandler = (e) => {
@@ -15,8 +15,8 @@ const Petform = (props) => {
     setAnimalAge(e.target.value);
   };
 
-  const animalLocationHandler = (e) => {
-    SetAnimalLocation(e.target.value);
+  const animalGenderHandler = (e) => {
+    SetAnimalGender(e.target.value);
   };
 
   const onSubmitFormHandler = (e) => {
@@ -25,7 +25,8 @@ const Petform = (props) => {
     const animalData = {
       type: animalType,
       age: animalAge,
-      location: animalLocation,
+      gender: animalGender,
+      id: Math.random().toString(),
     };
 
     setFormSubmitted(true);
@@ -34,39 +35,36 @@ const Petform = (props) => {
 
     setAnimalType("");
     setAnimalAge("");
-    SetAnimalLocation("");
+    SetAnimalGender("");
   };
   return (
     <form onSubmit={onSubmitFormHandler}>
-      <div
-        className={`${styles["search-pet__controls"]} ${
-          formSubmitted && styles["form-submitted"]
-        }`}
-      >
+      <div className={styles["search-pet__controls"]}>
         <div className={styles["search-pet__control"]}>
           <label>Animal</label>
           <select onChange={animalTypeHandler} type="text">
-            <option value="dog">Doggo</option>
-            <option value="dog">A Meow</option>
+            <option value="Any">Any</option>
+            <option value="Dog">Doggo</option>
+            <option value="Cat">A Meow</option>
           </select>
         </div>
         <div className={styles["search-pet__control"]}>
           <label>Age</label>
-          <select onChange={animalAgeHandler} type="number">
-            <option value="senior">Oldy</option>
-            <option value="adult">Adult</option>
-            <option value="young">Young</option>
-            <option value="baby">Baby</option>
+          <select onChange={animalAgeHandler} type="text">
+            <option value="Any">Any</option>
+            <option value="Senior">Oldy</option>
+            <option value="Adult">Adult</option>
+            <option value="Young">Young</option>
+            <option value="Baby">Baby</option>
           </select>
         </div>
         <div className={styles["search-pet__control"]}>
-          <label>Location/Zip</label>
-          <input
-            onChange={animalLocationHandler}
-            type="number"
-            min="1000"
-            step="1"
-          />
+          <label>Gender</label>
+          <select onChange={animalGenderHandler} type="text">
+            <option value="Any">Any</option>
+            <option value="Female">Girl</option>
+            <option value="Male">Boy</option>
+          </select>
         </div>
       </div>
 

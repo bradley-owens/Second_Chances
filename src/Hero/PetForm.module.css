@@ -1,18 +1,10 @@
-.form-submitted {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
 .search-pet__controls {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1.5rem;
   text-align: left;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .search-pet__control label {
@@ -32,19 +24,23 @@ select {
   max-width: 100%;
 }
 
+.search-pet__actions {
+  display: flex;
+  justify-content: center;
+}
 .search-pet__actions button {
   background-color: #fbff12ef;
   color: black;
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.5rem;
-  border-radius: 6px;
-  justify-items: center;
-  margin: auto;
+  padding: 1.5rem;
+  border-radius: 100px;
 }
 
 .search-pet__actions button:hover {
   background-color: #c8b6ff;
   color: #fbff12;
+  border: 4px solid #fbff12;
+  font-weight: bolder;
   transition: 0.3s;
 }

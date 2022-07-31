@@ -10,7 +10,7 @@ const client = new Client({
 });
 
 const App = () => {
-  const [apiData, setApiData] = useState("");
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
     async function fetchPetData() {
@@ -20,7 +20,7 @@ const App = () => {
         .map((el) => {
           if (el.photos.length > 0) return el;
         })
-        .filter((pet) => pet != undefined);
+        .filter((pet) => pet !== undefined);
 
       setApiData(pics);
     }

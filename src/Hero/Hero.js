@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PetForm from "./PetForm";
-import PetDisplay from "./PetDisplay";
+import PetFilter from "./PetFilter";
 import styles from "./Hero.module.css";
 
 const Hero = (props) => {
@@ -28,7 +28,7 @@ const Hero = (props) => {
       <div className={styles["hero-form"]}>
         <PetForm onSavePetFormData={savePetFormData} />
       </div>
-      <PetDisplay
+      <PetFilter
         onSaveAnimalData={animalData}
         onSaveFormSubmission={formSubmission}
         onSaveApiAnimals={props.onSaveApiData}
