@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import Hero from "./Hero/Hero";
+import PetDisplay from "./Hero/PetDisplay";
 import { Client } from "@petfinder/petfinder-js";
 
 const client = new Client({
@@ -30,6 +31,13 @@ const App = () => {
   return (
     <div className="App">
       <Hero onSaveApiData={apiData} />
+      <section>
+        <PetDisplay
+          onSaveAnimalData={animalData}
+          onSaveFormSubmission={formSubmission}
+          onSaveApiAnimals={props.onSaveApiData}
+        />
+      </section>
     </div>
   );
 };
