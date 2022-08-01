@@ -34,8 +34,8 @@ const Hero = (props) => {
       </div>
       <PetDisplay
         onSaveAnimalData={animalData}
-        onSaveFormSubmission={formSubmission}
         onSaveApiAnimals={props.onSaveApiData}
+        onSaveFormSubmission={formSubmission}
       />
     </div>
   );

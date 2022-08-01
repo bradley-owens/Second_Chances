@@ -5,7 +5,6 @@ const Petform = (props) => {
   const [animalType, setAnimalType] = useState("Dog");
   const [animalAge, setAnimalAge] = useState("Senior");
   const [animalGender, SetAnimalGender] = useState("Girl");
-  const [formSubmitted, setFormSubmitted] = useState("false");
 
   const animalTypeHandler = (e) => {
     setAnimalType(e.target.value);
@@ -28,8 +27,6 @@ const Petform = (props) => {
       gender: animalGender,
       id: Math.random().toString(),
     };
-
-    setFormSubmitted(true);
 
     props.onSavePetFormData(animalData);
 

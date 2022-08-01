@@ -1,7 +1,7 @@
 .display {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 3rem;
+  row-gap: 11rem;
   padding-left: 7rem;
 }
 
@@ -25,10 +25,11 @@
 .display-card {
   width: 20rem;
   height: 30rem;
-  border: 5px solid black;
+  border: 3px solid black;
   border-radius: 20px;
   text-align: center;
-  background-color: #fbff12d3;
+  background: linear-gradient(90deg, #c1c40e, #fdff7fef);
+  box-shadow: 0 20px 40px 0px rgba(0, 0, 0, 0.3);
 }
 
 .display-card__img {
@@ -38,10 +39,22 @@
   border-top-right-radius: 15px;
 }
 
+.display-card__info {
+  padding: 0.5rem 1rem;
+}
 .display-card__name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
 .display-card__breed {
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.display-card__description {
+  font-size: 0.8rem;
+  line-height: 1.7;
 }

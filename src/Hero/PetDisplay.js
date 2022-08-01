@@ -35,9 +35,11 @@ const PetDisplay = (props) => {
         className={styles["display-card__img"]}
         src={pet.photos[0].small}
       ></img>
-      <h2 className={styles["display-card__name"]}>{pet.name}</h2>
-      <h3 className={styles["display-card__breed"]}>{pet.breeds.primary}</h3>
-      <p className={styles["display-card__description"]}>{pet.description}</p>
+      <div className={styles["display-card__info"]}>
+        <h2 className={styles["display-card__name"]}>{pet.name}</h2>
+        <h3 className={styles["display-card__breed"]}>{pet.breeds.primary}</h3>
+        <p className={styles["display-card__description"]}>{pet.description}</p>
+      </div>
     </div>
   ));
 
