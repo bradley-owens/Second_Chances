@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PetForm from "./PetForm";
 import styles from "./Hero.module.css";
 import img from "./IMG/Hero.svg";
+import PetDisplay from "./PetDisplay";
 
 const Hero = (props) => {
   const [formSubmission, setFormSubmission] = useState(false);
@@ -31,6 +32,11 @@ const Hero = (props) => {
         </div>
         <img className={styles["hero-img"]} src={img}></img>
       </div>
+      <PetDisplay
+        onSaveAnimalData={animalData}
+        onSaveFormSubmission={formSubmission}
+        onSaveApiAnimals={props.onSaveApiData}
+      />
     </div>
   );
 };

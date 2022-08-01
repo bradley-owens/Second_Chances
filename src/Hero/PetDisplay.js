@@ -13,6 +13,22 @@ const PetDisplay = (props) => {
     id: userPetRequest.id,
   };
 
+  const filteredPets = [];
+
+  const filterPets = () => {
+    apiPetRequest.forEach((pet) => {
+      if (
+        pet.species == petFilter.type &&
+        pet.age == petFilter.age &&
+        pet.gender == petFilter.gender
+      ) {
+        filteredPets.push(pet);
+      } else {
+        console.log("Nil pets");
+      }
+    });
+  };
+
   const display = apiPetRequest.map((pet) => (
     <div className={styles["display-card"]} key={Math.random()}>
       <img
@@ -24,24 +40,16 @@ const PetDisplay = (props) => {
       <p className={styles["display-card__description"]}>{pet.description}</p>
     </div>
   ));
-  // const filteredPets = [];
-
-  // const filterPets = () => {
-  //   apiPetRequest.forEach((pet) => {
-  //     if (
-  //       pet.species == petFilter.type &&
-  //       pet.age == petFilter.age &&
-  //       pet.gender == petFilter.gender
-  //     ) {
-  //       filteredPets.push(pet);
-  //     } else {
-  //       console.log("Nil pets");
-  //     }
-  //   });
-  // };
 
   if (props.onSaveFormSubmission === true) {
-    return <div className={styles.display}>{display}</div>;
+    return (
+      <div>
+        <h1 className={styles["display-title"]}>
+          🔻 Scroll down to find a new friend! 🔻
+        </h1>
+        <div className={styles.display}>{display}</div>
+      </div>
+    );
   }
   return null;
 };

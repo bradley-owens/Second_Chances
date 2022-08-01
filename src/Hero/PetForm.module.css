@@ -29,18 +29,20 @@ select {
   justify-content: center;
 }
 .search-pet__actions button {
-  background-color: #fbff12ef;
+  background: linear-gradient(90deg, #fbff12, #fdff7fef);
   color: black;
   font-size: 1rem;
   font-weight: bold;
   padding: 1.5rem;
   border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .search-pet__actions button:hover {
-  background-color: #c8b6ff;
-  color: #fbff12;
-  border: 4px solid #fbff12;
-  font-weight: bolder;
-  transition: 0.3s;
+  background: linear-gradient(45deg, #ffffff, #c8b6ff);
+  /* border: 4px solid #fbff12;
+  font-weight: bolder; */
+  transition: 1s;
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./PetForm.module.css";
-// import PetDisplay from "./PetDisplay";
 
 const Petform = (props) => {
   const [animalType, setAnimalType] = useState("Dog");
@@ -37,14 +36,6 @@ const Petform = (props) => {
     setAnimalType("");
     setAnimalAge("");
     SetAnimalGender("");
-
-    // return (
-    //   <PetDisplay
-    //     onSaveAnimalData={animalData}
-    //     onSaveFormSubmission={formSubmission}
-    //     onSaveApiAnimals={props.onSaveApiData}
-    //   />
-    // );
   };
   return (
     <form onSubmit={onSubmitFormHandler}>
