@@ -1,12 +1,10 @@
-import React from "react";
-import Wrapper from "./Helpers/Wrapper";
+import React, { Fragment } from "react";
 import styles from "./PetDisplay.module.css";
 
 const PetDisplay = (props) => {
   const userPetRequest = props.onSaveAnimalData;
   const apiPetRequest = props.onSaveApiAnimals;
 
-  console.log(apiPetRequest);
   const petFilter = {
     type: userPetRequest.type,
     gender: userPetRequest.age,
@@ -19,8 +17,6 @@ const PetDisplay = (props) => {
       el.age == petFilter.age
     );
   });
-
-  console.log(filtered);
 
   const display = filtered.map((pet) => (
     <div className={styles["display-card"]} key={Math.random()}>
@@ -42,12 +38,12 @@ const PetDisplay = (props) => {
 
   if (props.onSaveFormSubmission === true) {
     return (
-      <Wrapper>
+      <Fragment>
         <h1 className={styles["display-title"]}>
           🔻 Scroll down to find a new friend! 🔻
         </h1>
         <div className={styles.display}>{display}</div>
-      </Wrapper>
+      </Fragment>
     );
   }
   return null;

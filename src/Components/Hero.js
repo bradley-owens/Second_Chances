@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Wrapper from "./Helpers/Wrapper";
+import React, { useState, Fragment } from "react";
 import PetForm from "./PetForm";
 import styles from "./Hero.module.css";
 import img from "./IMG/Hero.svg";
@@ -17,7 +16,7 @@ const Hero = (props) => {
   };
 
   return (
-    <Wrapper>
+    <Fragment>
       <div className={styles.hero}>
         <div className={styles["container__main"]}>
           <h1>Second Chances</h1>
@@ -40,7 +39,7 @@ const Hero = (props) => {
         onSaveApiAnimals={props.onSaveApiData}
         onSaveFormSubmission={formSubmission}
       />
-    </Wrapper>
+    </Fragment>
   );
 };
 
