@@ -25,7 +25,6 @@ const Petform = (props) => {
       type: animalType,
       age: animalAge,
       gender: animalGender,
-      id: Math.random().toString(),
     };
 
     props.onSavePetFormData(animalData);

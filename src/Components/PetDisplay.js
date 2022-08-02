@@ -1,4 +1,5 @@
 import React from "react";
+import Wrapper from "./Helpers/Wrapper";
 import styles from "./PetDisplay.module.css";
 
 const PetDisplay = (props) => {
@@ -10,13 +11,11 @@ const PetDisplay = (props) => {
     type: userPetRequest.type,
     gender: userPetRequest.age,
     age: userPetRequest.age,
-    id: userPetRequest.id,
   };
 
-  const filtered = apiPetRequest.filter(function (el) {
+  const filtered = apiPetRequest.filter((el) => {
     return (
-      el.species == petFilter.type ||
-      el.gender == petFilter.gender ||
+      (el.species == petFilter.type && el.gender == petFilter.gender) ||
       el.age == petFilter.age
     );
   });
@@ -43,12 +42,12 @@ const PetDisplay = (props) => {
 
   if (props.onSaveFormSubmission === true) {
     return (
-      <div>
+      <Wrapper>
         <h1 className={styles["display-title"]}>
           🔻 Scroll down to find a new friend! 🔻
         </h1>
         <div className={styles.display}>{display}</div>
-      </div>
+      </Wrapper>
     );
   }
   return null;

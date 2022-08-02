@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Wrapper from "./Helpers/Wrapper";
 import PetForm from "./PetForm";
 import styles from "./Hero.module.css";
 import img from "./IMG/Hero.svg";
@@ -10,14 +11,13 @@ const Hero = (props) => {
   const savePetFormData = (enteredData) => {
     setAnimalData({
       ...enteredData,
-      id: Math.random().toString(),
     });
 
     setFormSubmission(true);
   };
 
   return (
-    <div>
+    <Wrapper>
       <div className={styles.hero}>
         <div className={styles["container__main"]}>
           <h1>Second Chances</h1>
@@ -40,7 +40,7 @@ const Hero = (props) => {
         onSaveApiAnimals={props.onSaveApiData}
         onSaveFormSubmission={formSubmission}
       />
-    </div>
+    </Wrapper>
   );
 };
 
