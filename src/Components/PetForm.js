@@ -4,7 +4,7 @@ import styles from "./PetForm.module.css";
 const Petform = (props) => {
   const [animalType, setAnimalType] = useState("Dog");
   const [animalAge, setAnimalAge] = useState("Senior");
-  const [animalGender, SetAnimalGender] = useState("Girl");
+  const [animalGender, setAnimalGender] = useState("Girl");
 
   const animalTypeHandler = (e) => {
     setAnimalType(e.target.value);
@@ -15,7 +15,7 @@ const Petform = (props) => {
   };
 
   const animalGenderHandler = (e) => {
-    SetAnimalGender(e.target.value);
+    setAnimalGender(e.target.value);
   };
 
   const onSubmitFormHandler = (e) => {
@@ -29,10 +29,6 @@ const Petform = (props) => {
     };
 
     props.onSavePetFormData(animalData);
-
-    setAnimalType("");
-    setAnimalAge("");
-    SetAnimalGender("");
   };
   return (
     <form onSubmit={onSubmitFormHandler}>
@@ -43,6 +39,7 @@ const Petform = (props) => {
             <option value="Any">Any</option>
             <option value="Dog">Doggo</option>
             <option value="Cat">A Meow</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div className={styles["search-pet__control"]}>

@@ -28,7 +28,10 @@ const Hero = (props) => {
           </h3>
         </div>
         <div className={styles["hero-form"]}>
-          <PetForm onSavePetFormData={savePetFormData} />
+          <PetForm
+            onSavePetFormData={savePetFormData}
+            onSaveApiAnimals={props.onSaveApiData}
+          />
         </div>
         <img className={styles["hero-img"]} src={img}></img>
       </div>

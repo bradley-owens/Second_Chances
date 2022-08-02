@@ -8,32 +8,30 @@ const PetDisplay = (props) => {
   console.log(apiPetRequest);
   const petFilter = {
     type: userPetRequest.type,
-    age: userPetRequest.age,
     gender: userPetRequest.age,
+    age: userPetRequest.age,
     id: userPetRequest.id,
   };
 
-  const filteredPets = [];
+  const filtered = apiPetRequest.filter(function (el) {
+    return (
+      el.species == petFilter.type ||
+      el.gender == petFilter.gender ||
+      el.age == petFilter.age
+    );
+  });
 
-  const filterPets = () => {
-    apiPetRequest.forEach((pet) => {
-      if (
-        pet.species == petFilter.type &&
-        pet.age == petFilter.age &&
-        pet.gender == petFilter.gender
-      ) {
-        filteredPets.push(pet);
-      } else {
-        console.log("Nil pets");
-      }
-    });
-  };
+  console.log(filtered);
 
-  const display = apiPetRequest.map((pet) => (
+  const display = filtered.map((pet) => (
     <div className={styles["display-card"]} key={Math.random()}>
       <img
         className={styles["display-card__img"]}
-        src={pet.photos[0].small}
+        src={`${
+          pet.photos.length === 0
+            ? "https://www.metrorollerdoors.com.au/wp-content/uploads/2018/02/unavailable-image-700x525.jpg"
+            : pet.photos[0].small
+        }`}
       ></img>
       <div className={styles["display-card__info"]}>
         <h2 className={styles["display-card__name"]}>{pet.name}</h2>
