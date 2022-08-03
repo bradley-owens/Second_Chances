@@ -5,6 +5,7 @@ const PetDisplay = (props) => {
   const userPetRequest = props.onSaveAnimalData;
   const apiPetRequest = props.onSaveApiAnimals;
 
+  console.log(apiPetRequest);
   const petFilter = {
     type: userPetRequest.type,
     gender: userPetRequest.age,
