@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Second_Chances/static/css/main.49e5b42a.css",
+    "main.js": "/Second_Chances/static/js/main.af3c12e2.js",
+    "static/media/Hero.svg": "/Second_Chances/static/media/Hero.17c5acdfcc2941873fcd3290b2fda247.svg",
+    "index.html": "/Second_Chances/index.html",
+    "main.49e5b42a.css.map": "/Second_Chances/static/css/main.49e5b42a.css.map",
+    "main.af3c12e2.js.map": "/Second_Chances/static/js/main.af3c12e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49e5b42a.css",
+    "static/js/main.af3c12e2.js"
+  ]
+}
