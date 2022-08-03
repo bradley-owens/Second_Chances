@@ -22,7 +22,7 @@ const App = () => {
         })
         .filter((pet) => pet !== undefined);
 
-      setApiData(animals);
+      setApiData(pics);
     }
     fetchPetData();
   }, []);
