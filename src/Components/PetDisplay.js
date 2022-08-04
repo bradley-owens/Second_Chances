@@ -13,16 +13,14 @@ const PetDisplay = (props) => {
   };
 
   const filtered = apiPetRequest.filter((el) => {
-    return (
-      (el.species == petFilter.type && el.gender == petFilter.gender) ||
-      el.age == petFilter.age
-    );
+    return el.species === petFilter.type;
   });
 
   const display = filtered.map((pet) => (
     <div className={styles["display-card"]} key={Math.random()}>
       <img
         className={styles["display-card__img"]}
+        alt=""
         src={`${
           pet.photos.length === 0
             ? "https://www.metrorollerdoors.com.au/wp-content/uploads/2018/02/unavailable-image-700x525.jpg"
