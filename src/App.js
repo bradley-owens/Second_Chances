@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./App.css";
-import Hero from "./Components/Hero";
+import Hero from "./Components/Hero/Hero";
 import { Client } from "@petfinder/petfinder-js";
 
 const client = new Client({

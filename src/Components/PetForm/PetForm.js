@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styles from "./PetForm.module.css";
+import styles from "../PetForm/PetForm.module.css";
 
 const Petform = (props) => {
   const animalTypeRef = useRef("Dog");

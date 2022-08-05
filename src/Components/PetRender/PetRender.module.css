@@ -1,0 +1,24 @@
+.display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 11rem;
+  padding-left: 7rem;
+  margin-bottom: 8rem;
+}
+
+.display-title {
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #fbff12;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-90%);
+  }
+  100% {
+    transform: translateY(90);
+  }
+}

@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from "react";
-import PetForm from "./PetForm";
+import PetForm from "../PetForm/PetForm";
 import styles from "./Hero.module.css";
-import img from "./IMG/Hero.svg";
-import PetDisplay from "./PetDisplay";
+import img from "../IMG/Hero.svg";
+import PetRender from "../PetRender/PetRender";
 
 const Hero = (props) => {
   const [formSubmission, setFormSubmission] = useState(false);
@@ -34,7 +34,7 @@ const Hero = (props) => {
         </div>
         <img className={styles["hero-img"]} src={img}></img>
       </div>
-      <PetDisplay
+      <PetRender
         onSaveAnimalData={animalData}
         onSaveApiAnimals={props.onSaveApiData}
         onSaveFormSubmission={formSubmission}
