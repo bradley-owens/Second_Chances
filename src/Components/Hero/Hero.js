@@ -34,6 +34,7 @@ const Hero = (props) => {
         </div>
         <img className={styles["hero-img"]} src={img}></img>
       </div>
+
       <PetRender
         onSaveAnimalData={animalData}
         onSaveApiAnimals={props.onSaveApiData}

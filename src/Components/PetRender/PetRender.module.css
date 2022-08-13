@@ -22,3 +22,22 @@
     transform: translateY(90);
   }
 }
+
+@media (max-width: 820px) {
+  .centre {
+    display: grid;
+    justify-items: center;
+    margin-right: -4.5rem;
+  }
+
+  .display {
+    row-gap: 1rem;
+    padding-left: 0;
+    column-gap: 3.5rem;
+    grid-template-columns: 200px 200px 200px;
+  }
+
+  .display-title {
+    text-align: end;
+  }
+}

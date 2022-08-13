@@ -7,6 +7,7 @@ const PetRender = (props) => {
   const userPetRequest = props.onSaveAnimalData;
   const apiPetRequest = props.onSaveApiAnimals;
 
+  // console.log(apiPetRequest);
   const petFilter = {
     type: userPetRequest.type,
     gender: userPetRequest.age,
@@ -19,12 +20,12 @@ const PetRender = (props) => {
 
   if (props.onSaveFormSubmission === true) {
     return (
-      <Fragment>
+      <div className={styles.centre}>
         <ErrorCheck pets={filtered} />
         <div className={styles.display}>
           <PetDisplayCard pets={filtered} />
         </div>
-      </Fragment>
+      </div>
     );
   }
   return null;

@@ -46,3 +46,14 @@ select {
   font-weight: bolder; */
   transition: 1s;
 }
+
+@media (max-width: 820px) {
+  .search-pet__controls {
+    gap: 0.5rem;
+  }
+  .search-pet__control input,
+  select {
+    width: 15rem;
+    max-width: 100%;
+  }
+}

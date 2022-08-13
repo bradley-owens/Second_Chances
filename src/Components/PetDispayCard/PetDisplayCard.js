@@ -18,7 +18,7 @@ const PetDisplay = (props) => {
         <p className={styles["display-card__size"]}>{pet.size}</p>
         <p className={styles["display-card__description"]}>
           {`${
-            pet.tags.length === 0
+            pet.tags.length <= 0
               ? pet.status
               : pet.tags[0] + "/" + pet.tags[1] + "/" + pet.tags[2]
           }`}

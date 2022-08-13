@@ -27,7 +27,6 @@ const Petform = (props) => {
         <div className={styles["search-pet__control"]}>
           <label>Animal</label>
           <select ref={animalTypeRef} type="text">
-            <option value="Dog">Any</option>
             <option value="Dog">Doggo</option>
             <option value="Cat">A Meow</option>
             <option value="Other">Other</option>
@@ -36,7 +35,6 @@ const Petform = (props) => {
         <div className={styles["search-pet__control"]}>
           <label>Age</label>
           <select ref={animalAgeRef} type="text">
-            <option value="Young">Any</option>
             <option value="Senior">Oldy</option>
             <option value="Adult">Adult</option>
             <option value="Young">Young</option>
@@ -46,7 +44,6 @@ const Petform = (props) => {
         <div className={styles["search-pet__control"]}>
           <label>Gender</label>
           <select ref={animalGenderRef} type="text">
-            <option value="Male">Any</option>
             <option value="Female">Girl</option>
             <option value="Male">Boy</option>
           </select>

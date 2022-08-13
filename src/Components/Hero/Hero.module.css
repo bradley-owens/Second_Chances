@@ -6,6 +6,7 @@
   column-gap: 6rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-content: center;
 }
 
 .container__main {
@@ -49,4 +50,39 @@
 .hero-img:hover {
   transform: translateX(-3rem);
   transition: 2s;
+}
+
+@media (max-width: 820px) {
+  .hero {
+    column-gap: 1rem;
+    width: 95%;
+    grid-template-columns: 500px 200px;
+    grid-template-rows: 350px 350px;
+    height: fit-content;
+  }
+
+  .container__main {
+    align-self: flex-end;
+    margin-left: 3.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h3 {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+  }
+
+  .hero-img {
+    width: 20rem;
+    align-self: flex-end;
+    margin-bottom: 0;
+    transform: translateX(-2rem);
+  }
+
+  .hero-form {
+    margin-left: 8rem;
+  }
 }
