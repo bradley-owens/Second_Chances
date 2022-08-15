@@ -16,9 +16,11 @@ const App = () => {
     async function fetchPetData() {
       const response = await client.animal.search();
       const animals = response.data.animals;
+
       const pics = animals
         .map((el) => {
           if (el.photos.length > 0) return el;
+          return el;
         })
         .filter((pet) => pet !== undefined);
 
