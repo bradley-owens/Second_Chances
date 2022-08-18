@@ -7,6 +7,7 @@ import PetRender from "../PetRender/PetRender";
 const Hero = (props) => {
   const [formSubmission, setFormSubmission] = useState(false);
   const [animalData, setAnimalData] = useState({});
+
   const savePetFormData = (enteredData) => {
     setAnimalData({
       ...enteredData,
@@ -39,6 +40,7 @@ const Hero = (props) => {
         onSaveAnimalData={animalData}
         onSaveApiAnimals={props.onSaveApiData}
         onSaveFormSubmission={formSubmission}
+        onClickedPet={props.onClickedPet}
       />
     </Fragment>
   );

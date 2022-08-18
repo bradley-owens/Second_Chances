@@ -24,8 +24,9 @@ const PetDisplay = (props) => {
           }`}
         </p>
         <a
-          href={pet.url}
-          target="_blank"
+          // href={pet.url}
+          // target="_blank"
+          onClick={() => props.onClickedPet(pet)}
           className={styles["display-card__link"]}
         >
           Find me!

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import PetDisplayCard from "../PetDispayCard/PetDisplayCard";
 import ErrorCheck from "./ErrorCheck";
 import styles from "../PetRender/PetRender.module.css";
@@ -23,7 +23,7 @@ const PetRender = (props) => {
       <div className={styles.centre}>
         <ErrorCheck pets={filtered} />
         <div className={styles.display}>
-          <PetDisplayCard pets={filtered} />
+          <PetDisplayCard onClickedPet={props.onClickedPet} pets={filtered} />
         </div>
       </div>
     );
