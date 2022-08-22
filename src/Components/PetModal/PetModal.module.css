@@ -1,0 +1,65 @@
+.modal-flex {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.flex-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-self: center;
+  margin-top: -3rem;
+}
+
+.modal-img {
+  width: 20rem;
+  height: 18rem;
+  border-radius: 10px;
+}
+.name {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: underline 5px solid #c8b6ff;
+}
+
+.breed {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.modal-bottom {
+  padding: 1.2rem;
+  gap: 5rem;
+  display: flex;
+}
+.adopt {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button {
+  font-size: 1.2rem;
+
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  background: #c8b6ff;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.close {
+  font-size: 1.2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  background: #fdff7fef;
+  padding: 0.5rem;
+  text-decoration: none;
+}
