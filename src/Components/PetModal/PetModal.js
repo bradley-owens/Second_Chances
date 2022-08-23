@@ -32,7 +32,7 @@ const PetModal = (props) => {
           <p>{pet.contact.phone}</p>
           <p>{pet.contact.email}</p>
         </div>
-        <div className={styles.adopt}>
+        <div className={styles.actions}>
           <a className={styles.button} href={pet.url} target="_blank">
             Adopt!
           </a>
