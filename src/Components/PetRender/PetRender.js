@@ -10,12 +10,13 @@ const PetRender = (props) => {
   // console.log(apiPetRequest);
   const petFilter = {
     type: userPetRequest.type,
-    gender: userPetRequest.age,
+    gender: userPetRequest.gender,
     age: userPetRequest.age,
   };
 
   const filtered = apiPetRequest.filter((el) => {
-    return el.species == petFilter.type;
+    if (el.species == petFilter.type && el.gender == petFilter.gender)
+      return el;
   });
 
   if (props.onSaveFormSubmission === true) {

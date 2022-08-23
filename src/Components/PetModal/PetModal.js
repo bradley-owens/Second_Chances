@@ -15,6 +15,7 @@ const PetModal = (props) => {
         <div className={styles["flex-info"]}>
           <h2 className={styles.name}>{pet.name}</h2>
           <h3 className={styles.breed}>{pet.breeds.primary}</h3>
+          <p>{pet.gender}</p>
           <p>{pet.size}</p>
           <p>{pet.age}</p>
           <p>{`${
