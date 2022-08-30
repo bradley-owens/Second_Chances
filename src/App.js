@@ -12,9 +12,11 @@ const client = new Client({
 
 const App = () => {
   const [apiData, setApiData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function fetchPetData() {
+      setIsLoading(true);
       const response = await client.animal.search();
       const animals = response.data.animals;
 
@@ -26,7 +28,7 @@ const App = () => {
 
       setApiData(pics);
 
-      console.log(pics);
+      setIsLoading(false);
     }
     fetchPetData();
   }, []);
@@ -51,7 +53,11 @@ const App = () => {
   return (
     <Fragment>
       <div className="App">
-        <Hero onSaveApiData={apiData} onClickedPet={showPet} />
+        <Hero
+          onSaveApiData={apiData}
+          onClickedPet={showPet}
+          isLoading={isLoading}
+        />
       </div>
       {showPetModal && (
         <PetModal onCloseModal={hideModal} onShowClickedPet={clickedPet} />

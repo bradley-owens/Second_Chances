@@ -22,7 +22,7 @@ const PetRender = (props) => {
   if (props.onSaveFormSubmission === true) {
     return (
       <div className={styles.centre}>
-        <ErrorCheck pets={filtered} />
+        <ErrorCheck pets={filtered} isLoading={props.isLoading} />
         <div className={styles.display}>
           <PetDisplayCard onClickedPet={props.onClickedPet} pets={filtered} />
         </div>

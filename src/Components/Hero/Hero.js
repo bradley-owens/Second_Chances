@@ -41,6 +41,7 @@ const Hero = (props) => {
         onSaveApiAnimals={props.onSaveApiData}
         onSaveFormSubmission={formSubmission}
         onClickedPet={props.onClickedPet}
+        isLoading={props.isLoading}
       />
     </Fragment>
   );

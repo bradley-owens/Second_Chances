@@ -4,7 +4,7 @@ import styles from "./PetModal.module.css";
 
 const PetModal = (props) => {
   const pet = props.onShowClickedPet;
-  console.log(pet);
+
   return (
     <Modal onClose={props.onCloseModal}>
       <div className={styles["modal-flex"]}>
