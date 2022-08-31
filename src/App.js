@@ -14,22 +14,22 @@ const App = () => {
   const [apiData, setApiData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  async function fetchPetData() {
+    setIsLoading(true);
+    const response = await client.animal.search();
+    const animals = response.data.animals;
+
+    const pics = animals
+      .map((el) => {
+        if (el.photos.length > 0) return el;
+      })
+      .filter((pet) => pet !== undefined);
+
+    setApiData(pics);
+    setIsLoading(false);
+  }
+
   useEffect(() => {
-    async function fetchPetData() {
-      setIsLoading(true);
-      const response = await client.animal.search();
-      const animals = response.data.animals;
-
-      const pics = animals
-        .map((el) => {
-          if (el.photos.length > 0) return el;
-        })
-        .filter((pet) => pet !== undefined);
-
-      setApiData(pics);
-
-      setIsLoading(false);
-    }
     fetchPetData();
   }, []);
 
