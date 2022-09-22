@@ -37,12 +37,15 @@ select {
   border-radius: 100px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
+  transition: 0.3s;
 }
 
 .search-pet__actions button:hover {
-  background: linear-gradient(45deg, #ffffff, #c8b6ff);
-  transition: 1s;
+  background: linear-gradient(90deg, #fbff12, #fcfdadef);
+
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 .bump {

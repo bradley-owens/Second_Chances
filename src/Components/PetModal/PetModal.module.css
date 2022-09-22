@@ -53,12 +53,15 @@ p {
   background: #c8b6ff;
   padding: 0.5rem;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .button:hover {
   background-color: #7a4ff9;
   border-color: #7a4ff9;
   color: white;
+  /* letter-spacing: 1px; */
+  transition: 0.3s;
 }
 
 .close {
@@ -70,9 +73,12 @@ p {
   background: #fdff7f;
   padding: 0.5rem;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .close:hover {
   background-color: #ffb52c;
   color: white;
+  /* letter-spacing: 1px; */
+  transition: 0.3s;
 }

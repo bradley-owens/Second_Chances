@@ -22,9 +22,9 @@ const Hero = (props) => {
         <div className={styles["container__main"]}>
           <h1>Second Chances</h1>
           <h3>
-            Second Chances gives you the oppurtunity to seek out and provide a
-            new home to all the oldies and younglings up for adoption that
-            didn't get the chance to give out all their love!
+            Second Chances allows you the opportunity to provide a new home to
+            all the rescue animals up for adoption that didn't get a chance to
+            give out all their love!
           </h3>
         </div>
         <div className={styles["hero-form"]}>
